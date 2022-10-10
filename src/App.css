@@ -1,3 +1,9 @@
+body{
+  max-width: 1440px;
+  margin: auto;
+  background-color: #404b61;
+}
+
 .App {
   text-align: center;
 }
