@@ -1,7 +1,8 @@
 import React from 'react';
 import Logo from '../../img/logo.png'
-import {  MagnifyingGlassIcon, ShoppingCartIcon } from '@heroicons/react/24/solid'
-import { Link } from 'react-router-dom';
+import { MagnifyingGlassIcon, ShoppingCartIcon } from '@heroicons/react/24/solid'
+import { Link, NavLink } from 'react-router-dom';
+import './Header.css';
 
 const Header = () => {
   return (
@@ -11,11 +12,11 @@ const Header = () => {
       </div>
 
       <nav className='space-x-10'>
-        <Link to='/'>Home</Link>
-        <Link to='/topics'>Topics</Link>
-        <Link to='/statist'>Statist</Link>
-        <Link to='/chart'>Chart</Link>
-        <Link to='/blog'>Blog</Link>
+        <NavLink className={({isActive}) => isActive ? 'active' : undefined} to='/home'>Home</NavLink>
+        <NavLink to='/topics'>Topics</NavLink>
+        <NavLink to='/statist'>Statist</NavLink>
+        <NavLink to='/chart'>Chart</NavLink>
+        <NavLink to='/blog'>Blog</NavLink>
       </nav>
 
       <div className='flex items-center space-x-5'>

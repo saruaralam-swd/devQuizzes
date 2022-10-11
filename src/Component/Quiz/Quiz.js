@@ -12,6 +12,7 @@ const Quiz = () => {
         {
           questions.map(question => <Question key={question.id} question={question}></Question>)
         }
+        <button className='w-[90%] md:w-[60%]  bg-[#8e44ad] hover:bg-[#732d91] p-4 text-white text[1.1rem] font-semibold rounded-md'>Submit All</button>
       </div>
     </div>
   );
