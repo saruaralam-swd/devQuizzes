@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../img/logo.png'
+import Logo from '../../img/logo-1.svg'
 import { MagnifyingGlassIcon, ShoppingCartIcon } from '@heroicons/react/24/solid'
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className=' md:flex md:justify-between items-center bg-[#140342] text-white px-[3%] space-y-5 md:space-y-0 p-3'>
       <div>
-        <Link className='text' to='/'><img className='w-[210px]' src={Logo} alt="" /></Link>
+        <Link className='text' to='/'><img className='w-[180px]' src={Logo} alt="" /></Link>
       </div>
 
       <nav className='space-x-10'>
