@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './Component/Blog/Blog';
+import Error from './Component/Error/Error';
 import Home from './Component/Home/Home';
 import Quiz from './Component/Quiz/Quiz';
 import Topics from './Component/Topics/Topics';
@@ -33,14 +34,18 @@ function App() {
           element: <Quiz></Quiz>
         },
         {
-          path: 'blog',
+          path: '/blog',
+          element: <Blog></Blog>
+        },
+        {
+          path: '/statistics',
           element: <Blog></Blog>
         }
       ]
     },
     {
       path: '*',
-      element:<div>404 Page not found</div>
+      element: <Error></Error>
     }
   ]);
 

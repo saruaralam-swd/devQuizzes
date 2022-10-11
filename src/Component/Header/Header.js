@@ -14,7 +14,7 @@ const Header = () => {
       <nav className='space-x-10'>
         <NavLink className={({isActive}) => isActive ? 'active' : undefined} to='/home'>Home</NavLink>
         <NavLink to='/topics'>Topics</NavLink>
-        <NavLink to='/statist'>Statist</NavLink>
+        <NavLink to='/statistics'>Statistics</NavLink>
         <NavLink to='/chart'>Chart</NavLink>
         <NavLink to='/blog'>Blog</NavLink>
       </nav>

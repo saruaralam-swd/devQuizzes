@@ -2,29 +2,24 @@ import React from 'react';
 
 const Blog = () => {
   return (
-    <div className='h-screen flex items-center justify-center bg-gray-400'>
-      <div className='bg-white rounded-md shadow-lg my-10 p-10'>
-        <h2 className='text-3xl font-semibold text-center mb-10'>Which language runs in a web browser?</h2>
-        <ul className='text-xl space-y-5'>
-          <li className='space-x-3'>
-            <input type="radio" name="answer" id="a" />
-            <label htmlFor="a" >Java</label>
-          </li>
-          <li className='space-x-3'>
-            <input type="radio" name="answer" id="b" />
-            <label htmlFor="b" >Java</label>
-          </li>
-          <li className='space-x-3'>
-            <input type="radio" name="answer" id="c" />
-            <label htmlFor="c" >Java</label>
-          </li>
-          <li className='space-x-3'>
-            <input type="radio" name="answer" id="d" />
-            <label htmlFor="d" >Java</label>
-          </li>
-        </ul>
+    <section>
+      <div className='border p-4'>
+        <h1 className='text-2xl'>#. What is the purpose of react router?</h1>
+        <li className=' list-disc'> React Router is a state container for the current location , or URL. It keeps track of the location and renders different Route s as it changes, and it also gives you tools to update the location using Link s and the history API. it's makes our root component clear, maintainable and readable</li>
       </div>
-    </div>
+
+      <div className='border p-4'>
+        <h1 className='text-2xl'>#. How does conText API Works?</h1>
+        <p className=' list-disc'><span className='text-gray-500 font-semibold'>Context provides a way to pass data through the component tree without having to pass props down manually at every level.</span> In a typical React application, data is passed top-down (parent to child) via props, but such usage can be cumbersome for certain types of props (e.g. locale preference, UI theme) that are required by many components within an application. Context provides a way to share values like these between components without having to explicitly pass a prop through every level of the tree. </p>
+      </div>
+
+      <div className='border p-4'>
+        <h1 className='text-2xl'>What is useRef() ?</h1>
+        <p className=' list-disc'><span className=' text-gray-500 font-semibold'> useRef is like a “box” that can hold a mutable value in its .current property</span> It can be used to store a mutable value that does not cause a re-render when updated. It can be used to access a DOM element directly.</p>
+        <p>Use useRef if you need to manage focus, text selection, trigger imperative animations or integrating third-party libraries</p>
+        <p></p>
+      </div>
+    </section>
   );
 };
 

@@ -4,13 +4,13 @@ import Topic from '../Topic/Topic';
 import './Home.css';
 
 const Home = () => {
-  const Topics = useLoaderData();
-  const { data } = Topics;
+  const topics = useLoaderData();
+  const { data } = topics;
 
   return (
     <div>
       <section className='hero-section flex justify-center items-center'>
-        <h1 className='text-7xl text-white font-semibold leading-tight'>Test your knowledge by <br></br> taking quizzes</h1>
+        <h1 className='text-6xl text-white font-semibold leading-tight'>Test your knowledge by <br></br> taking quizzes</h1>
       </section>
 
       <section className=' bg-[#404b61] h-full md:h-screen pt-20'>
