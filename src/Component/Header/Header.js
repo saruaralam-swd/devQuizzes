@@ -8,14 +8,13 @@ const Header = () => {
   return (
     <header className=' md:flex md:justify-between items-center bg-[#140342] text-white px-[3%] space-y-5 md:space-y-0 p-3'>
       <div>
-        <Link className='text' to='/'><img className='w-[180px]' src={Logo} alt="" /></Link>
+        <Link className='text' to='/'><img className='w-[150px]' src={Logo} alt="" /></Link>
       </div>
 
       <nav className='space-x-10'>
         <NavLink className={({isActive}) => isActive ? 'active' : undefined} to='/home'>Home</NavLink>
         <NavLink to='/topics'>Topics</NavLink>
-        <NavLink to='/statistics'>Statistics</NavLink>
-        <NavLink to='/chart'>Chart</NavLink>
+        <NavLink to='/pai'>Statistics</NavLink>
         <NavLink to='/blog'>Blog</NavLink>
       </nav>
 

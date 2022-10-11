@@ -13,7 +13,7 @@ const Home = () => {
         <h1 className='text-6xl text-white font-semibold leading-tight'>Test your knowledge by <br></br> taking quizzes</h1>
       </section>
 
-      <section className=' bg-[#404b61] h-full md:h-screen pt-20'>
+      <section className=' bg-[#404b61] h-full md:h-screen pt-20 '>
         <div className='grid md:grid-cols-4 gap-10 w-[80%] mx-auto'>
           {
             data.map(topic => <Topic key={topic.id} topic={topic}>Topic</Topic>)

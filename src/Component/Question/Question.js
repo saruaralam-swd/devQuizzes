@@ -1,34 +1,22 @@
 import { EyeIcon, cir } from '@heroicons/react/24/solid'
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Question = ({ question }) => {
   const { id, options, correctAnswer } = question;
-  // const [value, setValue] = useState();
-
 
   const clickHandle = (e) => {
     const selectText = e.target.textContent;
-    // setValue(selectText);
 
     if (selectText === correctAnswer) {
-      toast('right');
+      toast.success('Right Answer');
     }
     else {
-      toast('wrong !!!');
+      toast.error('Wrong Answer!!!');
     }
   }
 
-  const eyeHandle = () => {
-    toast(correctAnswer);
-  };
-
-  // const btnHandle = () => {
-    // console.log(value);
-    // console.log(correctAnswer);
-  // };
+  const eyeHandle = () => toast.info(correctAnswer); 
 
   return (
     <div className='w-[90%] md:w-[60%]'>
@@ -49,7 +37,7 @@ const Question = ({ question }) => {
             }
           </ul>
         </div>
-        {/* <button onClick={btnHandle} className='w-full text-white bg-[#8e44ad] hover:bg-[#732d91] p-4 text-[1.1rem] font-semibold rounded-b-md'>Submit</button> */}
+        {/* <button className='w-full text-white bg-[#8e44ad] hover:bg-[#732d91] p-4 text-[1.1rem] font-semibold rounded-b-md'>Submit</button> */}
       </div>
       <ToastContainer />
     </div>

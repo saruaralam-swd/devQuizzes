@@ -7,7 +7,7 @@ const Topics = () => {
   const { data } = topics;
 
   return (
-    <div className=' bg-[#404b61] h-full md:h-screen pt-20'>
+    <div className=' bg-[#404b61] h-full md:h-screen py-20'>
       <div className='grid md:grid-cols-4 gap-10 w-[80%] mx-auto'>
         {
           data.map(topic => <Topic key={topic.id} topic={topic}>Topic</Topic>)
