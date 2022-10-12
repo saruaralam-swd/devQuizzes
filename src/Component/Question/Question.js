@@ -1,4 +1,4 @@
-import { EyeIcon, cir } from '@heroicons/react/24/solid'
+import { EyeIcon} from '@heroicons/react/24/solid'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Question.css'
@@ -40,7 +40,7 @@ const Question = ({ question }) => {
         <div className='  rounded-lg p-10'>
           <div className='flex gap-5 items-start justify-between'>
             <h2 className='text-2xl font-semibold text-center mb-10'>{newQuestion}</h2>
-            <button onClick={eyeHandle}><EyeIcon className="h-6 w-6 " /></button>
+            <button onClick={eyeHandle} className='hover:text-indigo-600'><EyeIcon className="h-6 w-6 " /></button>
           </div>
           <ul className='text-xl space-y-5' id={id}>
             {
