@@ -6,28 +6,33 @@ import './Question.css'
 const Question = ({ question }) => {
   const { id, options, correctAnswer } = question;
 
-  const newQuestion = (question.question.replace(/(<([^>]+)>)/ig, ''));
+  const newQuestion = (question.question.replace( /(<([^>]+)>)/ig, ''));
 
-  const selectOptionHandle = (event) => {
+  console.log();
+
+  const clickHandle = (event) => {
     const newValue = (event.target.innerText).replace(/\s+/g, '').trim();
     const newCorrectAnswer = (correctAnswer).replace(/\s+/g, '').trim();
 
     if (newValue === newCorrectAnswer) {
       (event.target.classList.add('bg-green-300'));
+      (event.target.classList.remove('bg-slate-300'));
       toast.success('Right Answer')
     }
-    else {
+    else{
       (event.target.classList.add('bg-red-300'));
+      (event.target.classList.remove('bg-slate-300'));
       toast.error('Wrong Answer')
     }
 
     // const result = (options.filter(text => (text.replace(/\s+/g, '').trim()) !== newCorrectAnswer));
+
     // const parent = (event.target.parentNode.parentNode);
     // const target = (event.target);
     // console.log(parent.nextSibling);
   }
 
-  const eyeIconHandle = () => toast.info(correctAnswer);
+  const eyeHandle = () => toast.info(correctAnswer);
 
   return (
     <div className='w-[90%] md:w-[60%]'>
@@ -35,13 +40,13 @@ const Question = ({ question }) => {
         <div className='  rounded-lg p-10'>
           <div className='flex gap-5 items-start justify-between'>
             <h2 className='text-2xl font-semibold text-center mb-10'>{newQuestion}</h2>
-            <button onClick={eyeIconHandle}><EyeIcon className="h-6 w-6 " /></button>
+            <button onClick={eyeHandle}><EyeIcon className="h-6 w-6 " /></button>
           </div>
           <ul className='text-xl space-y-5' id={id}>
             {
               options.map((option, idx) =>
                 <div key={idx} >
-                  <button onClick={selectOptionHandle} className=" bg-slate-300 text-left rounded-md border p-2 w-full">
+                  <button onClick={clickHandle} className=" bg-slate-300 text-left rounded-md border p-2 w-full">
                     {option}
                   </button>
                 </div>
