@@ -7,9 +7,9 @@ const Quiz = () => {
   const { questions, name } = quiz.data;
 
   return (
-    <div className=' bg-gray-400 pt-10'>
-      <h1 className='text-3xl text-center font-semibold'>Quiz of {name}</h1>
-      <div className='flex flex-col items-center justify-center bg-gray-400'>
+    <div className='pt-10' >
+      <h1 className='text-3xl text-center font-semibold '>Quiz of <span className='text-indigo-600'>{name}</span></h1>
+      <div className='flex flex-col items-center justify-center '>
         {
           questions.map(question => <Question key={question.id} question={question}></Question>)
         }

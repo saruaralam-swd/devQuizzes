@@ -6,7 +6,7 @@ const Error = () => {
   return (
     <div className=' h-screen flex items-center justify-center bg-[#F8F8F8]'>
       <div className='text-center space-y-4'>
-        <img  src={img} alt="" />
+        <img src={img} alt="" />
         <h1 className='text-6xl text-gray-500'>404 </h1>
         <p className=' text-gray-400 text-2xl'>Page not found</p>
         <div>

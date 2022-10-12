@@ -1,43 +1,54 @@
 import { EyeIcon, cir } from '@heroicons/react/24/solid'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './Question.css'
 
 const Question = ({ question }) => {
   const { id, options, correctAnswer } = question;
 
-  const clickHandle = (e) => {
-    const selectText = e.target.textContent;
+  const newQuestion = (question.question.replace(/(<([^>]+)>)/ig, ''));
 
-    if (selectText === correctAnswer) {
-      toast.success('Right Answer');
+  const selectOptionHandle = (event) => {
+    const newValue = (event.target.innerText).replace(/\s+/g, '').trim();
+    const newCorrectAnswer = (correctAnswer).replace(/\s+/g, '').trim();
+
+    if (newValue === newCorrectAnswer) {
+      (event.target.classList.add('bg-green-300'));
+      toast.success('Right Answer')
     }
     else {
-      toast.error('Wrong Answer!!!');
+      (event.target.classList.add('bg-red-300'));
+      toast.error('Wrong Answer')
     }
+
+    // const result = (options.filter(text => (text.replace(/\s+/g, '').trim()) !== newCorrectAnswer));
+    // const parent = (event.target.parentNode.parentNode);
+    // const target = (event.target);
+    // console.log(parent.nextSibling);
   }
 
-  const eyeHandle = () => toast.info(correctAnswer); 
+  const eyeIconHandle = () => toast.info(correctAnswer);
 
   return (
     <div className='w-[90%] md:w-[60%]'>
-      <div className='bg-white rounded-md shadow-lg my-10'>
-        <div className='p-10'>
+      <div className=' rounded-md ring-2 shadow-2xl my-10'>
+        <div className='  rounded-lg p-10'>
           <div className='flex gap-5 items-start justify-between'>
-            <h2 className='text-3xl font-semibold text-center mb-10'>{question?.question}</h2>
-            <button onClick={eyeHandle}><EyeIcon className="h-6 w-6 " /></button>
+            <h2 className='text-2xl font-semibold text-center mb-10'>{newQuestion}</h2>
+            <button onClick={eyeIconHandle}><EyeIcon className="h-6 w-6 " /></button>
           </div>
-          <ul className='text-xl space-y-5'>
+          <ul className='text-xl space-y-5' id={id}>
             {
               options.map((option, idx) =>
-                <li key={idx} className=' space-x-2'>
-                  <input type="radio" id={option} name={id} value={option} />
-                  <label onClick={clickHandle} htmlFor={option}>{option}</label>
-                </li>
+                <div key={idx} >
+                  <button onClick={selectOptionHandle} className=" bg-slate-300 text-left rounded-md border p-2 w-full">
+                    {option}
+                  </button>
+                </div>
               )
             }
           </ul>
         </div>
-        {/* <button className='w-full text-white bg-[#8e44ad] hover:bg-[#732d91] p-4 text-[1.1rem] font-semibold rounded-b-md'>Submit</button> */}
       </div>
       <ToastContainer />
     </div>

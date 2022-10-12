@@ -1,6 +1,5 @@
-// import "./styles.css";
 import React, { useCallback, useState } from "react";
-import { PieChart, Pie, Sector, LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from "recharts";
+import { PieChart, Pie, Sector, LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend, ResponsiveContainer } from "recharts";
 import { useLoaderData } from "react-router-dom";
 
 const Pai = () => {
@@ -110,7 +109,6 @@ const Pai = () => {
         <Line type="monotone" dataKey="total" stroke="#82ca9d" />
         <XAxis dataKey="name"></XAxis>
         <YAxis dataKey=""></YAxis>
-        <Legend></Legend>
         <Tooltip></Tooltip>
       </LineChart>
     </div>

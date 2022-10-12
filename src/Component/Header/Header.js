@@ -1,28 +1,26 @@
 import React from 'react';
-import Logo from '../../img/logo-1.svg'
-import { MagnifyingGlassIcon, ShoppingCartIcon } from '@heroicons/react/24/solid'
+import Logo from '../../img/logo.png'
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   return (
-    <header className=' md:flex md:justify-between items-center bg-[#140342] text-white px-[3%] space-y-5 md:space-y-0 p-3'>
+    <header className=' md:flex md:justify-between items-center  px-[3%] space-y-5 md:space-y-0 p-2 border-b-2 '>
       <div>
         <Link className='text' to='/'><img className='w-[150px]' src={Logo} alt="" /></Link>
       </div>
 
-      <nav className='space-x-10'>
-        <NavLink className={({isActive}) => isActive ? 'active' : undefined} to='/home'>Home</NavLink>
-        <NavLink to='/topics'>Topics</NavLink>
-        <NavLink to='/pai'>Statistics</NavLink>
-        <NavLink to='/blog'>Blog</NavLink>
+      <nav className='flex flex-col md:flex-row'>
+        <NavLink className='text-[#051b29] uppercase font-semibold mx-2' to='/home'> {({ isActive }) => isActive ? 'active' : undefined}Home</NavLink>
+        <NavLink className='text-[#051b29] uppercase font-semibold mx-2' to='/topics'>Topics</NavLink>
+        <NavLink className='text-[#051b29] uppercase font-semibold mx-2' to='/pai'>Statistics</NavLink>
+        <NavLink className='text-[#051b29] uppercase font-semibold mx-2' to='/blog'>Blog</NavLink>
       </nav>
 
       <div className='flex items-center space-x-5'>
-        <MagnifyingGlassIcon className='h-6 w-6' />
-        <ShoppingCartIcon className='h-6 w-6' />
-        <Link>
-          <button className='bg-white text-[#140342] hover:bg-blue-600 hover:text-white font-semibold duration-500 border-transparent py-2 px-8 rounded-md'>Log in</button>
+        <Link className=' space-x-4'>
+          <button className=' bg-[#197fc3] hover:bg-[#1569a1] duration-500 text-white px-4 py-1 rounded-md'>Sign Up</button>
+          <button className=' ring-1 rounded-md px-4 py-1 hover:bg-[#197fc3] border-transparent duration-500'>Sign In</button>
         </Link>
       </div>
     </header>

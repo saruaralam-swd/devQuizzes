@@ -1,0 +1,11 @@
+.green, .red{
+  color: white;
+}
+
+.green{
+  background-color: rgb(62, 187, 62);
+}
+
+.red{
+  background-color: rgb(184, 72, 72);
+}

@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital@0;1&display=swap');
 
-body{
+body {
   max-width: 1440px;
   margin: auto;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.blue {
+  color: #051b29;
 }
