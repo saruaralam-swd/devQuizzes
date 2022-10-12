@@ -1,13 +1,13 @@
 import React from 'react';
-import Logo from '../../img/logo.png'
+import Logo2 from '../../img/logo.png'
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   return (
-    <header className=' md:flex md:justify-between items-center  px-[3%] space-y-5 md:space-y-0 p-2 border-b-2 '>
+    <header className='md:flex md:justify-between items-center  px-[3%] space-y-5 md:space-y-0 p-2 border-b-2 '>
       <div>
-        <Link className='text' to='/'><img className='w-[150px]' src={Logo} alt="" /></Link>
+        <Link className='text' to='/'><img className='w-[150px]' src={Logo2} alt="" /></Link>
       </div>
 
       <nav className='flex flex-col md:flex-row'>

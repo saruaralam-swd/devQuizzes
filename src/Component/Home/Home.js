@@ -10,11 +10,11 @@ const Home = () => {
 
   return (
     <div>
-      <section className='text-[#051b29] md:flex items-center justify-around '>
+      <section className='text-[#051b29] md:flex items-center justify-around pt-10 md:pt-0'>
         <div className='p-[5%] md:m-0 space-y-2'>
-          <h2 className='text-5xl font-semibold leading-tight'>All you need to be a good <br /> software engineer</h2>
+          <h2 className='text-[1.8rem] md:text-5xl font-semibold leading-snug'>All you need to be a good <br /> software engineer</h2>
           <button className='bg-[#7f1052] hover:bg-[#520a35] text-white px-4 py-1 rounded'>Become a Member</button>
-          <p>Get latest news,course updates related to software engineering</p>
+          <p>Get latest quiz updates related to software engineering</p>
         </div>
         <div className=''>
           <img src={img} alt="" />
@@ -30,7 +30,7 @@ const Home = () => {
         </div>
       </section>
 
-      <footer>
+      <footer className='pt-10'>
         <p className='blue text-sm font-semibold text-center mb-10'>Copyright &copy; 2022. All Rights Reserved.</p>
       </footer>
     </div>

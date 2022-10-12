@@ -88,29 +88,33 @@ const Pai = () => {
   );
 
   return (
-    <div className="md:flex justify-around items-center px-[3%] md:mt-20">
-      <PieChart width={400} height={400}>
-        <Pie
-          activeIndex={activeIndex}
-          activeShape={renderActiveShape}
-          data={data}
-          cx={200}
-          cy={200}
-          innerRadius={60}
-          outerRadius={80}
-          fill="#8884d8"
-          dataKey="total"
-          onMouseEnter={onPieEnter}
-        />
-      </PieChart>
+    <div className=" md:flex items-center justify-evenly mt-20 space-y-5">
+      <div>
+        <PieChart width={450} height={350} className='mx-auto'>
+          <Pie
+            activeIndex={activeIndex}
+            activeShape={renderActiveShape}
+            data={data}
+            cx={200}
+            cy={200}
+            innerRadius={60}
+            outerRadius={80}
+            fill="#8884d8"
+            dataKey="total"
+            onMouseEnter={onPieEnter}
+          />
+        </PieChart>
+      </div>
 
-      <LineChart width={500} height={300} data={data}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <Line type="monotone" dataKey="total" stroke="#82ca9d" />
-        <XAxis dataKey="name"></XAxis>
-        <YAxis dataKey=""></YAxis>
-        <Tooltip></Tooltip>
-      </LineChart>
+      <div>
+        <LineChart width={450} height={350} data={data} className='mx-auto'>
+          <CartesianGrid strokeDasharray="3 3" />
+          <Line type="monotone" dataKey="total" stroke="#82ca9d" />
+          <XAxis dataKey="name"></XAxis>
+          <YAxis dataKey=""></YAxis>
+          <Tooltip></Tooltip>
+        </LineChart>
+      </div>
     </div>
   );
 };
